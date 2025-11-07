@@ -1,0 +1,133 @@
+/* --- Configurações Globais --- */
+body {
+    background: linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 1)), 
+                url('../img/sonserina-bg.png') no-repeat top center;
+    
+    background-size: 100% auto;
+    
+    font-family: 'Lato', sans-serif;
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+/* --- Fontes e Títulos (Estilo da Index) --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+.logo, .nav-link, .subtitle, .btn {
+    font-family: 'Cinzel', serif;
+}
+.subtitle {
+    color: #AAAAAA; /* Prata Sonserina */
+    letter-spacing: 2px;
+}
+
+/* --- Navbar (Fica transparente) --- */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+/* --- Hero Section (Card 90/90 com Imagem 1) --- */
+.hero-section-slytherin { /* Classe renomeada */
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh auto 0 auto;
+    position: relative;
+    z-index: 10;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    overflow: hidden;
+    
+    /* Fundo (Imagem 1) */
+    background: linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), 
+                url('../img/Sonserina-bg2.png') no-repeat center center;
+    background-size: cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* --- Seções de Conteúdo --- */
+.members-section,
+.history-section {
+    padding: 6rem 0;
+    background-color: rgba(12, 12, 12, 0.6); 
+    position: relative;
+    z-index: 5;
+}
+
+/* O "overlap" */
+.members-section {
+    margin-top: -10vh;
+    padding-top: calc(10vh + 6rem);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+/* --- Cards dos Membros (Estilo Sonserina) --- */
+.member-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #1A472A; /* Verde Sonserina */
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(170, 170, 170, 0.2); /* Sombra Prata */
+}
+
+.member-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #AAAAAA; /* Prata Sonserina */
+}
+
+.member-card h3 {
+    color: #AAAAAA; /* Prata Sonserina */
+    margin-top: 1.5rem;
+}
+
+/* --- Botões (Estilo Sonserina) --- */
+.btn {
+    font-weight: 700;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.btn-slytherin { /* Classe renomeada */
+    background-color: #1A472A; /* Verde */
+    border-color: #1A472A;
+    color: #AAAAAA; /* Prata */
+}
+.btn-slytherin:hover {
+    background-color: #AAAAAA; /* Prata */
+    border-color: #AAAAAA;
+    color: #1A472A; /* Verde */
+    transform: scale(1.05);
+}
+.btn-slytherin-outline { /* Classe renomeada */
+    background-color: transparent;
+    border: 2px solid #AAAAAA; /* Prata */
+    color: #AAAAAA;
+}
+.btn-slytherin-outline:hover {
+    background-color: #AAAAAA;
+    border-color: #AAAAAA;
+    color: #1A472A; /* Verde */
+    transform: scale(1.05);
+}

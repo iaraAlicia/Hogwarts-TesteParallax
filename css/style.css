@@ -1,0 +1,156 @@
+/* Para evitar a barra de rolagem horizontal durante a animação */
+body {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: #1a1a1a; /* Cor de fundo caso as imagens falhem */
+}
+
+/* --- Fontes e Navbar --- */
+.logo {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+/* --- Seção Hero (Topo) --- */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    position: relative; /* Necessário para posicionar o vídeo e overlay */
+    overflow: hidden; /* Garante que o vídeo não saia dos limites */
+    display: flex; /* Se houvesse conteúdo, centralizaria */
+    align-items: center;
+    justify-content: center;
+    color: white; /* Cor do texto se houver */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Fica atrás de tudo */
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+    object-fit: cover; /* Garante que o vídeo cubra toda a área */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay escura (ajuste a opacidade) */
+    z-index: 1; /* Fica entre o vídeo e qualquer conteúdo */
+}
+
+/* Se você tivesse conteúdo na hero-section, ele teria z-index mais alto */
+/* Por exemplo: */
+/* .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+} */
+/* --- Seções de Conteúdo --- */
+.content-section {
+    padding: 10rem 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito parallax básico no fundo */
+}
+
+
+
+/* Fundos das seções */
+.gryffindor-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/GrifinoriaIlistracao.png');
+}
+
+.slytherin-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Sonserinailistracao.png');
+}
+
+.hufflepuff-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Lufa-Lufa.png');
+}
+/* --- O Truque do Personagem + Card --- */
+
+.character-wrapper {
+    position: relative;
+    display: inline-block; /* Garante que o wrapper tenha o tamanho do conteúdo */
+    margin-top: 50px; /* Dá espaço para a imagem "vazar" para cima */
+}
+
+.character-img {
+    /* Posicionamento da imagem */
+    position: relative;
+    z-index: 2; /* Fica na frente do card */
+    
+    /* Faz a imagem "sentar" em cima do card */
+    margin-bottom: -70px; 
+    
+    width: 280px; /* Ajuste o tamanho conforme sua imagem */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover (opcional) */
+.character-wrapper:hover .character-img {
+    transform: scale(1.05);
+}
+
+.character-card {
+    background-color: #E91E63; /* Cor rosa-choque da imagem */
+    color: white;
+    border-radius: 25px; /* Bordas bem arredondadas */
+    padding: 5rem 1.5rem 1.5rem 1.5rem; /* Padding: 5rem topo (para dar espaço à imagem), 1.5rem resto */
+    position: relative;
+    z-index: 1; /* Fica atrás da imagem */
+    min-width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.character-card h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* --- Botão Customizado --- */
+.btn-magic {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px; /* Botão "pílula" */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-magic:hover {
+    background-color: white;
+    color: #E91E63;
+    border-color: white;
+}

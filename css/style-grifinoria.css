@@ -1,0 +1,147 @@
+/* --- Configurações Globais --- */
+body {
+    background: linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 1)), 
+                url('../img/Grinfindor-bg.png') no-repeat top center;
+    
+    /* Garante que ela ocupe a largura e role naturalmente */
+    background-size: 100% auto;
+    
+    font-family: 'Lato', sans-serif;
+    color: #f0f0f0;
+    overflow-x: hidden; /* Evita barras laterais */
+}
+
+/* --- Fontes e Títulos (Estilo da Index) --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+.logo, .nav-link, .subtitle, .btn {
+    font-family: 'Cinzel', serif;
+}
+.subtitle {
+    color: #D3A625; /* Dourado */
+    letter-spacing: 2px;
+}
+
+/* --- Navbar (Fica transparente) --- */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+/* --- Hero Section (O "Card" 90vw/90vh com Imagem 1) --- */
+.hero-section-gryffindor {
+    /* O Card 90/90 */
+    width: 90vw;
+    height: 90vh;
+    
+    /* Centraliza o card na tela */
+    margin: 5vh auto 0 auto; /* 5vh de margem no topo, centralizado horizontalmente */
+
+    /* Posição */
+    position: relative;
+    z-index: 10; /* Fica NA FRENTE do fundo do body */
+    
+    /* Estilo do Card */
+    border-radius: 25px; /* Bordas arredondadas */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    overflow: hidden; /* Garante que a imagem de fundo obedeça a borda */
+    
+    /* Fundo (Imagem 1) */
+    background: linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), 
+                url('../img/Grinfindor-bg1.png') no-repeat center center;
+    background-size: cover;
+    
+    /* Centraliza o conteúdo DENTRO do card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Fica na frente do fundo do card */
+}
+
+
+/* --- Seções de Conteúdo --- */
+.members-section,
+.history-section {
+    padding: 6rem 0;
+    background-color: rgba(12, 12, 12, 0.0); /* Fundo escuro para legibilidade */
+    position: relative;
+    z-index: 5; /* Fica na frente do body, mas atrás do hero */
+}
+
+/* O "overlap" */
+.members-section {
+    /* Puxa esta seção para cima, para baixo do hero */
+    margin-top: -10vh;
+    
+    /* Adiciona padding para o conteúdo não ficar escondido */
+    padding-top: calc(10vh + 6rem); /* 10vh do overlap + 6rem do padding original */
+
+    /* Arredonda os cantos que vão "entrar" debaixo do card */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+/* --- Cards dos Membros --- */
+.member-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #740001;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(211, 166, 37, 0.2);
+}
+
+.member-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #D3A625;
+}
+
+.member-card h3 {
+    color: #D3A625;
+    margin-top: 1.5rem;
+}
+
+/* --- Botões (Mesmo estilo de antes) --- */
+.btn {
+    font-weight: 700;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.btn-gryffindor {
+    background-color: #740001;
+    border-color: #740001;
+    color: #D3A625;
+}
+.btn-gryffindor:hover {
+    background-color: #D3A625;
+    border-color: #D3A625;
+    color: #740001;
+    transform: scale(1.05);
+}
+.btn-gryffindor-outline {
+    background-color: transparent;
+    border: 2px solid #D3A625;
+    color: #D3A625;
+}
+.btn-gryffindor-outline:hover {
+    background-color: #D3A625;
+    border-color: #D3A625;
+    color: #740001;
+    transform: scale(1.05);
+}
