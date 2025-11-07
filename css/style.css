@@ -78,6 +78,10 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efeito parallax básico no fundo */
+
+    min-height: 90vh;
+    display: flex;       /* Liga o Flexbox */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
 
@@ -153,4 +157,55 @@ body {
     background-color: white;
     color: #E91E63;
     border-color: white;
+}
+
+
+.site-footer {
+    background-color: #0c0c0c; /* Mesmo preto do fundo */
+    color: #AAAAAA; /* Cor de texto sutil (prata) */
+    padding: 4rem 0;
+    margin-top: -2px; /* Pequeno ajuste para sobrepor qualquer borda */
+    border-top: 2px solid #333; /* Linha sutil no topo */
+    position: relative;
+    z-index: 20; /* Garante que fique na frente */
+}
+
+.site-footer h3,
+.site-footer h4 {
+    font-family: 'Cinzel', serif;
+    color: #FFFFFF; /* Títulos em branco */
+    margin-bottom: 1.5rem;
+}
+
+.site-footer .logo-footer {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.site-footer p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.site-footer .footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.site-footer .footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.site-footer .footer-links a {
+    text-decoration: none;
+    color: #AAAAAA;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.site-footer .footer-links a:hover {
+    color: #D3A625; /* Dourado no hover (Grifinória) */
 }
